@@ -18,6 +18,7 @@ BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs4-devel
 BuildRequires:	kdepimlibs4-devel
 BuildRequires:	pkgconfig(expat)
+BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
 BuildRequires:	pkgconfig(libidn)
 BuildRequires:	pkgconfig(libmsn)
