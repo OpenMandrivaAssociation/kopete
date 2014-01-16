@@ -16,6 +16,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.t
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs4-devel
+# Useless for now because Kleopatra headers are not installed
 BuildRequires:	kdepim4-devel
 BuildRequires:	kdepimlibs4-devel
 BuildRequires:	pkgconfig(expat)
@@ -118,6 +119,7 @@ plugin off of.
 %{_kde_iconsdir}/*/*/actions/contact_away_overlay.*
 %{_kde_iconsdir}/*/*/actions/contact_busy_overlay.*
 %{_kde_iconsdir}/*/*/actions/contact_food_overlay.*
+%{_kde_iconsdir}/*/*/actions/contact_freeforchat_overlay.*
 %{_kde_iconsdir}/*/*/actions/contact_invisible_overlay.*
 %{_kde_iconsdir}/*/*/actions/contact_phone_overlay.*
 %{_kde_iconsdir}/*/*/actions/contact_xa_overlay.*
@@ -398,6 +400,7 @@ based on Kopete.
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-1
 - New version 4.12.1
 - Add kdepim4-devel to BuildRequires
+- Update files
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.4-1
 - New version 4.11.4
