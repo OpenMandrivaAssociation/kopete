@@ -14,6 +14,7 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %endif
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		kopete-4.12.4-giflib51.patch
+Patch1:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs4-devel
@@ -390,6 +391,7 @@ based on Kopete.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake_kde4 -DWITH_GOOGLETALK=OFF
@@ -401,6 +403,7 @@ based on Kopete.
 %changelog
 * Wed May 28 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
 - Add giflib51 patch to fix build with giflib 5.1
+- Add jsoncpp patch to fix jsoncpp detection by cmake
 
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
 - New version 4.12.4

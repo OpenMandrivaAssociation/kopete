@@ -1,0 +1,12 @@
+diff -urN kopete-4.12.4/cmake/modules/FindJsonCpp.cmake kopete-4.12.4-patched/cmake/modules/FindJsonCpp.cmake
+--- kopete-4.12.4/cmake/modules/FindJsonCpp.cmake	2014-05-29 02:32:23.869512187 +1100
++++ kopete-4.12.4-patched/cmake/modules/FindJsonCpp.cmake	2014-05-29 02:32:11.950316438 +1100
+@@ -11,7 +11,7 @@
+ if ( JSONCPP_INCLUDE_DIR AND JSONCPP_LIBRARY )
+ 	set ( JSONCPP_FOUND true )
+ else ( JSONCPP_INCLUDE_DIR AND JSONCPP_LIBRARY )
+-	find_path ( JSONCPP_INCLUDE_DIR json/json.h PATH_SUFFIXES jsoncpp )
++	find_path ( JSONCPP_INCLUDE_DIR jsoncpp/json.h PATH_SUFFIXES jsoncpp )
+ 	find_library ( JSONCPP_LIBRARY NAMES jsoncpp )
+ 
+ 	if ( JSONCPP_INCLUDE_DIR AND JSONCPP_LIBRARY )
