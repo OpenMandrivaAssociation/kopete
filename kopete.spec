@@ -1,7 +1,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	4.12.4
-Release:	2
+Version:	4.13.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -401,6 +401,9 @@ based on Kopete.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.2-1
+- New version 4.13.2
+
 * Wed May 28 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
 - Add giflib51 patch to fix build with giflib 5.1
 - Add jsoncpp patch to fix jsoncpp detection by cmake
