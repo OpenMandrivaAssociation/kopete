@@ -13,8 +13,7 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %define ftpdir stable
 %endif
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kopete-4.12.4-giflib51.patch
-Patch1:		kopete-4.12.4-jsoncpp.patch
+Patch0:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs4-devel
@@ -391,7 +390,6 @@ based on Kopete.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %cmake_kde4 -DWITH_GOOGLETALK=OFF
@@ -403,6 +401,7 @@ based on Kopete.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
 - New version 4.14.1
+- Drop giflib51 patch (fixed upstream)
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.3-1
 - New version 4.13.3
