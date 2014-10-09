@@ -33,7 +33,7 @@ BuildRequires:	pkgconfig(linphone)
 BuildRequires:	pkgconfig(meanwhile)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ortp)
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	qca2-devel-qt4
 BuildRequires:	pkgconfig(qimageblitz)
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(zlib)
@@ -392,6 +392,8 @@ based on Kopete.
 %patch0 -p1
 
 %build
+# our qca pkg config is in a non standard path due to qt5/4 split
+export PKG_CONFIG_PATH=%{_libdir}/qt4/pkgconfig
 %cmake_kde4 -DWITH_GOOGLETALK=OFF
 %make
 
