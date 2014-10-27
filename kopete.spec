@@ -1,7 +1,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	4.14.2
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -34,7 +34,7 @@ BuildRequires:	pkgconfig(meanwhile)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ortp)
 BuildRequires:	pkgconfig(qca2)
-BuildRequires:	pkgconfig(qimageblitz)
+BuildRequires:	pkgconfig(qimageblitz) < 5.0.0
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(zlib)
 # Not in Main
@@ -399,6 +399,9 @@ based on Kopete.
 %makeinstall_std -C build
 
 %changelog
+* Mon Oct 27 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-2
+- Use pkgconfig(qimageblitz) < 5.0.0 to force Qt4 version
+
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
 - New version 4.14.2
 
