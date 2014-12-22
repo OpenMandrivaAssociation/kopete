@@ -1,6 +1,6 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	4.13.3
+Version:	14.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -12,9 +12,8 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kopete-4.12.4-giflib51.patch
-Patch1:		kopete-4.12.4-jsoncpp.patch
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs4-devel
@@ -35,7 +34,7 @@ BuildRequires:	pkgconfig(meanwhile)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ortp)
 BuildRequires:	pkgconfig(qca2)
-BuildRequires:	pkgconfig(qimageblitz)
+BuildRequires:	pkgconfig(qimageblitz) < 5.0.0
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(zlib)
 # Not in Main
@@ -391,7 +390,6 @@ based on Kopete.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %cmake_kde4 -DWITH_GOOGLETALK=OFF
@@ -401,6 +399,19 @@ based on Kopete.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.3-1
+- New version 4.14.3
+
+* Mon Oct 27 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-2
+- Use pkgconfig(qimageblitz) < 5.0.0 to force Qt4 version
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
+- New version 4.14.1
+- Drop giflib51 patch (fixed upstream)
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.3-1
 - New version 4.13.3
 
