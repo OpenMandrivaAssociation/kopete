@@ -1,6 +1,6 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	14.12.0
+Version:	4.14.3
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -12,7 +12,7 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
