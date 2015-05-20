@@ -1,6 +1,6 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -12,14 +12,14 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
-BuildRequires:	kdelibs4-devel
+BuildRequires:	kdelibs-devel
 # Useless for now because Kleopatra headers are not installed
-BuildRequires:	kdepim4-devel
-BuildRequires:	kdepimlibs4-devel
+BuildRequires:	kdepim-devel
+BuildRequires:	kdepimlibs-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
@@ -42,7 +42,7 @@ BuildRequires:	pkgconfig(zlib)
 
 Requires:	akonadi
 Requires:	qca2-plugin-openssl-%{_lib}
-Requires:	kdepimlibs4-core
+Requires:	kdepimlibs-core
 Requires:	jasper
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Conflicts:	%{_lib}kopete4 < 3:4.11.0
