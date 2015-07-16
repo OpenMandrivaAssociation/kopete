@@ -66,94 +66,93 @@ users can use, in addition to templates for new developers to base a
 plugin off of.
 
 %files
-%{_kde_bindir}/kopete
-%{_kde_bindir}/kopete_latexconvert.sh
-%{_kde_bindir}/winpopup-install
-%{_kde_bindir}/winpopup-send
-%{_kde_appsdir}/kopete
-%{_kde_appsdir}/kopete_contactnotes
-%{_kde_appsdir}/kopete_groupwise
-%{_kde_appsdir}/kopete_history
-%{_kde_appsdir}/kopete_history2
-%{_kde_appsdir}/kopete_jabber
-%{_kde_appsdir}/kopete_latex
-%{_kde_appsdir}/kopete_otr
-%{_kde_appsdir}/kopete_privacy
-%{_kde_appsdir}/kopete_skype
-%{_kde_appsdir}/kopete_statistics
-%{_kde_appsdir}/kopete_translator
-%{_kde_appsdir}/kopete_yahoo
-%{_kde_appsdir}/kopete_wlm
-%{_kde_appsdir}/kopeterichtexteditpart
-%{_kde_appsdir}/kconf_update/kopete-*
-%{_kde_libdir}/kde4/kcm_kopete_*
-%{_kde_libdir}/kde4/kopete_*
-%{_kde_libdir}/libqgroupwise.so
-%{_kde_libdir}/kde4/libchattexteditpart.so
-%{_kde_applicationsdir}/kopete.desktop
-%{_kde_configdir}/kopeterc
-%{_kde_datadir}/config.kcfg/historyconfig.kcfg
-%{_kde_datadir}/config.kcfg/history2config.kcfg
-%{_kde_datadir}/config.kcfg/kopeteappearancesettings.kcfg
-%{_kde_datadir}/config.kcfg/kopetebehaviorsettings.kcfg
-%{_kde_datadir}/config.kcfg/kopete_otr.kcfg
-%{_kde_datadir}/config.kcfg/kopetestatussettings.kcfg
-%{_kde_datadir}/config.kcfg/latexconfig.kcfg
-%{_kde_datadir}/config.kcfg/nowlisteningconfig.kcfg
-%{_kde_datadir}/config.kcfg/webpresenceconfig.kcfg
-%{_kde_datadir}/config.kcfg/translatorconfig.kcfg
-%{_kde_services}/aim.protocol
-%{_kde_services}/chatwindow.desktop
-%{_kde_services}/emailwindow.desktop
-%{_kde_services}/kconfiguredialog/kopete_*
-%{_kde_services}/kopete_*
-%{_kde_services}/xmpp.protocol
-%{_kde_services}/callto.protocol
-%{_kde_services}/skype.protocol
-%{_kde_services}/tel.protocol
-%{_kde_servicetypes}/kopete*
-%{_kde_datadir}/sounds/Kopete_Event.ogg
-%{_kde_datadir}/sounds/Kopete_Received.ogg
-%{_kde_datadir}/sounds/Kopete_Sent.ogg
-%{_kde_datadir}/sounds/Kopete_User_is_Online.ogg
-%{_kde_iconsdir}/*/*/actions/account_offline_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_away_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_busy_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_food_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_freeforchat_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_invisible_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_phone_overlay.*
-%{_kde_iconsdir}/*/*/actions/contact_xa_overlay.*
-%{_kde_iconsdir}/*/*/actions/emoticon.*
-%{_kde_iconsdir}/*/*/actions/im-status-message-edit.*
-%{_kde_iconsdir}/*/*/actions/mail-encrypt.*
-%{_kde_iconsdir}/*/*/actions/metacontact_unknown.*
-%{_kde_iconsdir}/*/*/actions/newmessage.*
-%{_kde_iconsdir}/*/*/actions/status_unknown_overlay.*
-%{_kde_iconsdir}/*/*/actions/status_unknown.*
-%{_kde_iconsdir}/*/*/actions/view-user-offline-kopete.*
-%{_kde_iconsdir}/*/*/actions/voicecall.*
-%{_kde_iconsdir}/*/*/actions/webcamreceive.*
-%{_kde_iconsdir}/*/*/actions/webcamsend.*
-%{_kde_iconsdir}/*/*/apps/kopete-offline.*
-%{_kde_iconsdir}/*/*/apps/kopete.*
-%{_kde_iconsdir}/*/*/status/object-locked-finished.*
-%{_kde_iconsdir}/*/*/status/object-locked-unverified.*
-%{_kde_iconsdir}/*/*/status/object-locked-verified.*
-%{_kde_datadir}/config.kcfg/urlpicpreview.kcfg
-%{_kde_docdir}/HTML/*/kopete
-%{_kde_libdir}/mozilla/plugins/skypebuttons.so
-%dir %{_kde_libdir}/kde4/plugins/accessible
-%{_kde_libdir}/kde4/plugins/accessible/chatwindowaccessiblewidgetfactory.so
-%{_datadir}/dbus-1/interfaces/*.xml
-%exclude %{_kde_appsdir}/kopete_latex
-%exclude %{_kde_libdir}/kde4/kcm_kopete_latex.*
-%exclude %{_kde_libdir}/kde4/kopete_latex.*
-%exclude %{_kde_datadir}/kde4/services/kopete_latex.desktop
-%exclude %{_kde_datadir}/config.kcfg/latexconfig.kcfg
-%exclude %{_kde_bindir}/kopete_latexconvert.sh
-%exclude %{_kde_datadir}/kde4/services/kconfiguredialog/kopete_latex_config.desktop
-%exclude %{_kde_appsdir}/kopete/icons/oxygen/32x32/apps/latex.png
+%{_bindir}/kopete_latexconvert.sh                                                                      
+%{_bindir}/winpopup-install                                                                            
+%{_bindir}/winpopup-send                                                                               
+%{_datadir}/apps/kopete                                                                                
+%{_datadir}/apps/kopete_contactnotes                                                                   
+%{_datadir}/apps/kopete_groupwise                                                                      
+%{_datadir}/apps/kopete_history                                                                        
+%{_datadir}/apps/kopete_history2                                                                       
+%{_datadir}/apps/kopete_jabber                                                                         
+%{_datadir}/apps/kopete_latex                                                                          
+%{_datadir}/apps/kopete_otr                                                                            
+%{_datadir}/apps/kopete_privacy                                                                        
+%{_datadir}/apps/kopete_skype                                                                          
+%{_datadir}/apps/kopete_statistics                                                                     
+%{_datadir}/apps/kopete_translator 
+%{_datadir}/apps/kopete_yahoo                                                                          
+%{_datadir}/apps/kopete_wlm                                                                            
+%{_datadir}/apps/kopeterichtexteditpart                                                                
+%{_datadir}/apps/kconf_update/kopete-*                                                                 
+%{_libdir}/kde4/kcm_kopete_*                                                                           
+%{_libdir}/kde4/kopete_*                                                                               
+%{_libdir}/libqgroupwise.so                                                                            
+%{_libdir}/kde4/libchattexteditpart.so                                                                 
+%{_datadir}/applications/kde4/kopete.desktop                                                           
+%{_datadir}/config/kopeterc                                                                            
+%{_datadir}/config.kcfg/historyconfig.kcfg                                                             
+%{_datadir}/config.kcfg/history2config.kcfg                                                            
+%{_datadir}/config.kcfg/kopeteappearancesettings.kcfg                                                  
+%{_datadir}/config.kcfg/kopetebehaviorsettings.kcfg                                                    
+%{_datadir}/config.kcfg/kopete_otr.kcfg                                                                
+%{_datadir}/config.kcfg/kopetestatussettings.kcfg                                                      
+%{_datadir}/config.kcfg/latexconfig.kcfg                                                               
+%{_datadir}/config.kcfg/nowlisteningconfig.kcfg                                                        
+%{_datadir}/config.kcfg/webpresenceconfig.kcfg  
+%{_datadir}/config.kcfg/translatorconfig.kcfg                                                          
+%{_datadir}/kde4/services/aim.protocol                                                                 
+%{_datadir}/kde4/services/chatwindow.desktop                                                           
+%{_datadir}/kde4/services/emailwindow.desktop                                                          
+%{_datadir}/kde4/services/kconfiguredialog/kopete_*                                                    
+%{_datadir}/kde4/services/kopete_*                                                                     
+%{_datadir}/kde4/services/xmpp.protocol                                                                
+%{_datadir}/kde4/services/callto.protocol                                                              
+%{_datadir}/kde4/services/skype.protocol                                                               
+%{_datadir}/kde4/services/tel.protocol                                                                 
+%{_datadir}/kde4/servicetypes/kopete*                                                                  
+%{_datadir}/sounds/Kopete_Event.ogg                                                                    
+%{_datadir}/sounds/Kopete_Received.ogg                                                                 
+%{_datadir}/sounds/Kopete_Sent.ogg                                                                     
+%{_datadir}/sounds/Kopete_User_is_Online.ogg                                                           
+%{_iconsdir}/*/*/actions/account_offline_overlay.*                                                     
+%{_iconsdir}/*/*/actions/contact_away_overlay.*                                                        
+%{_iconsdir}/*/*/actions/contact_busy_overlay.*                                                        
+%{_iconsdir}/*/*/actions/contact_food_overlay.*                                                        
+%{_iconsdir}/*/*/actions/contact_freeforchat_overlay.*  
+%{_iconsdir}/*/*/actions/contact_invisible_overlay.*                                                   
+%{_iconsdir}/*/*/actions/contact_phone_overlay.*                                                       
+%{_iconsdir}/*/*/actions/contact_xa_overlay.*                                                          
+%{_iconsdir}/*/*/actions/emoticon.*                                                                    
+%{_iconsdir}/*/*/actions/im-status-message-edit.*                                                      
+%{_iconsdir}/*/*/actions/mail-encrypt.*                                                                
+%{_iconsdir}/*/*/actions/metacontact_unknown.*                                                         
+%{_iconsdir}/*/*/actions/newmessage.*                                                                  
+%{_iconsdir}/*/*/actions/status_unknown_overlay.*                                                      
+%{_iconsdir}/*/*/actions/status_unknown.*                                                              
+%{_iconsdir}/*/*/actions/view-user-offline-kopete.*                                                    
+%{_iconsdir}/*/*/actions/voicecall.*                                                                   
+%{_iconsdir}/*/*/actions/webcamreceive.*                                                               
+%{_iconsdir}/*/*/actions/webcamsend.*                                                                  
+%{_iconsdir}/*/*/apps/kopete-offline.*                                                                 
+%{_iconsdir}/*/*/apps/kopete.*                                                                         
+%{_iconsdir}/*/*/status/object-locked-finished.*                                                       
+%{_iconsdir}/*/*/status/object-locked-unverified.*                                                     
+%{_iconsdir}/*/*/status/object-locked-verified.*                                                       
+%{_datadir}/config.kcfg/urlpicpreview.kcfg                                                             
+%doc %{_docdir}/HTML/*/kopete 
+%{_libdir}/mozilla/plugins/skypebuttons.so                                                             
+%dir %{_libdir}/kde4/plugins/accessible                                                                
+%{_libdir}/kde4/plugins/accessible/chatwindowaccessiblewidgetfactory.so                                
+%{_datadir}/dbus-1/interfaces/*.xml                                                                    
+%exclude %{_datadir}/apps/kopete_latex                                                                 
+%exclude %{_libdir}/kde4/kcm_kopete_latex.*                                                            
+%exclude %{_libdir}/kde4/kopete_latex.*                                                                
+%exclude %{_datadir}/kde4/services/kopete_latex.desktop                                                
+%exclude %{_datadir}/config.kcfg/latexconfig.kcfg                                                      
+%exclude %{_bindir}/kopete_latexconvert.sh                                                             
+%exclude %{_datadir}/kde4/services/kconfiguredialog/kopete_latex_config.desktop                        
+%exclude %{_datadir}/apps/kopete/icons/oxygen/32x32/apps/latex.png     
 
 #----------------------------------------------------------------------------
 
@@ -167,14 +166,14 @@ Requires:	imagemagick
 Kopete latex plugin for write andd read mesages in latexinder.
 
 %files latex
-%{_kde_bindir}/kopete_latexconvert.sh
-%{_kde_appsdir}/kopete_latex
-%{_kde_appsdir}/kopete/icons/oxygen/32x32/apps/latex.png
-%{_kde_libdir}/kde4/kcm_kopete_latex.*
-%{_kde_libdir}/kde4/kopete_latex.*
-%{_kde_datadir}/config.kcfg/latexconfig.kcfg
-%{_kde_services}/kopete_latex.desktop
-%{_kde_services}/kconfiguredialog/kopete_latex_config.desktop
+%{_bindir}/kopete_latexconvert.sh                                                                      
+%{_datadir}/apps/kopete_latex                                                                          
+%{_datadir}/apps/kopete/icons/oxygen/32x32/apps/latex.png                                              
+%{_libdir}/kde4/kcm_kopete_latex.*                                                                     
+%{_libdir}/kde4/kopete_latex.*                                                                         
+%{_datadir}/config.kcfg/latexconfig.kcfg                                                               
+%{_datadir}/kde4/services/kopete_latex.desktop                                                         
+%{_datadir}/kde4/services/kconfiguredialog/kopete_latex_config.desktop 
 
 #----------------------------------------------------------------------------
 
@@ -189,7 +188,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopetecontactlist}
-%{_kde_libdir}/libkopetecontactlist.so.%{kopetecontactlist_major}*
+%{_libdir}/libkopetecontactlist.so.%{kopetecontactlist_major}*
 
 #----------------------------------------------------------------------------
 
@@ -204,7 +203,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkyahoo}
-%{_kde_libdir}/libkyahoo.so.%{kyahoo_major}*
+%{_libdir}/libkyahoo.so.%{kyahoo_major}*
 
 #----------------------------------------------------------------------------
 
@@ -219,7 +218,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopete_videodevice}
-%{_kde_libdir}/libkopete_videodevice.so.%{kopete_videodevice_major}*
+%{_libdir}/libkopete_videodevice.so.%{kopete_videodevice_major}*
 
 #----------------------------------------------------------------------------
 
@@ -234,7 +233,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopeteaddaccountwizard}
-%{_kde_libdir}/libkopeteaddaccountwizard.so.%{kopeteaddaccountwizard_major}*
+%{_libdir}/libkopeteaddaccountwizard.so.%{kopeteaddaccountwizard_major}*
 
 #----------------------------------------------------------------------------
 
@@ -249,7 +248,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopete}
-%{_kde_libdir}/libkopete.so.%{kopete_major}*
+%{_libdir}/libkopete.so.%{kopete_major}*
 
 #----------------------------------------------------------------------------
 
@@ -264,7 +263,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopeteprivacy}
-%{_kde_libdir}/libkopeteprivacy.so.%{kopeteprivacy_major}*
+%{_libdir}/libkopeteprivacy.so.%{kopeteprivacy_major}*
 
 #----------------------------------------------------------------------------
 
@@ -279,7 +278,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopetechatwindow_shared}
-%{_kde_libdir}/libkopetechatwindow_shared.so.%{kopetechatwindow_shared_major}*
+%{_libdir}/libkopetechatwindow_shared.so.%{kopetechatwindow_shared_major}*
 
 #----------------------------------------------------------------------------
 
@@ -295,7 +294,7 @@ Conflicts:	kopete-otr < 0.8
 Kopete shared library.
 
 %files -n %{libkopete_otr_shared}
-%{_kde_libdir}/libkopete_otr_shared.so.%{kopete_otr_shared_major}*
+%{_libdir}/libkopete_otr_shared.so.%{kopete_otr_shared_major}*
 
 #----------------------------------------------------------------------------
 
@@ -310,7 +309,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopetestatusmenu}
-%{_kde_libdir}/libkopetestatusmenu.so.%{kopetestatusmenu_major}*
+%{_libdir}/libkopetestatusmenu.so.%{kopetestatusmenu_major}*
 
 #----------------------------------------------------------------------------
 
@@ -325,7 +324,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopete_oscar}
-%{_kde_libdir}/libkopete_oscar.so.%{kopete_oscar_major}*
+%{_libdir}/libkopete_oscar.so.%{kopete_oscar_major}*
 
 #----------------------------------------------------------------------------
 
@@ -340,7 +339,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{liboscar}
-%{_kde_libdir}/liboscar.so.%{oscar_major}*
+%{_libdir}/liboscar.so.%{oscar_major}*
 
 #----------------------------------------------------------------------------
 
@@ -355,7 +354,7 @@ Group:		System/Libraries
 Kopete shared library.
 
 %files -n %{libkopeteidentity}
-%{_kde_libdir}/libkopeteidentity.so.%{kopeteidentity_major}*
+%{_libdir}/libkopeteidentity.so.%{kopeteidentity_major}*
 
 #----------------------------------------------------------------------------
 
@@ -381,9 +380,9 @@ This package contains header files needed if you want to build applications
 based on Kopete.
 
 %files devel
-%{_kde_libdir}/*.so
-%exclude %{_kde_libdir}/libqgroupwise.so
-%{_kde_includedir}/kopete
+%{_libdir}/*.so
+%exclude %{_libdir}/libqgroupwise.so
+%{_includedir}/kopete
 
 #----------------------------------------------------------------------------
 
@@ -398,57 +397,3 @@ based on Kopete.
 %install
 %makeinstall_std -C build
 
-%changelog
-* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.3-1
-- New version 4.14.3
-
-* Mon Oct 27 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-2
-- Use pkgconfig(qimageblitz) < 5.0.0 to force Qt4 version
-
-* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
-- New version 4.14.2
-
-* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
-- New version 4.14.1
-- Drop giflib51 patch (fixed upstream)
-
-* Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.3-1
-- New version 4.13.3
-
-* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.2-1
-- New version 4.13.2
-
-* Wed May 28 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
-- Add giflib51 patch to fix build with giflib 5.1
-- Add jsoncpp patch to fix jsoncpp detection by cmake
-
-* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
-- New version 4.12.4
-
-* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.3-1
-- New version 4.12.3
-
-* Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.2-1
-- New version 4.12.2
-
-* Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-1
-- New version 4.12.1
-- Add kdepim4-devel to BuildRequires
-- Update files
-
-* Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.4-1
-- New version 4.11.4
-
-* Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.3-1
-- New version 4.11.3
-
-* Wed Oct 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.2-1
-- New version 4.11.2
-
-* Tue Sep 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.1-1
-- New version 4.11.1
-
-* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.0-1
-- New version 4.11.0
-- Split from kdenetwork4 package as upstream did
-- Move noarch files from library packages to main package
