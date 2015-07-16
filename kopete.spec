@@ -79,7 +79,8 @@ plugin off of.
 %{_datadir}/apps/kopete_otr                                                                            
 %{_datadir}/apps/kopete_privacy                                                                        
 %{_datadir}/apps/kopete_skype                                                                          
-%{_datadir}/apps/kopete_statistics                                                                     
+%{_datadir}/apps/kopete_statistics
+%{_bindir}/kopete
 %{_datadir}/apps/kopete_translator 
 %{_datadir}/apps/kopete_yahoo                                                                          
 %{_datadir}/apps/kopete_wlm                                                                            
