@@ -1,7 +1,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -18,8 +18,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs-devel
 # Useless for now because Kleopatra headers are not installed
-BuildRequires:	kdepim-devel
-BuildRequires:	kdepimlibs-devel
+BuildRequires:	kdepimlibs4-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
@@ -392,7 +391,7 @@ based on Kopete.
 %patch0 -p1
 
 %build
-%cmake_kde4 -DWITH_GOOGLETALK=OFF
+%cmake_kde4 -DWITH_GOOGLETALK=OFF -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
 %make
 
 %install

@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kopete-15.04.3.tar.xz: 1dddde0459361c47bcc7a27b88f8a53499cf73c5
+sources:
+  kopete-15.08.1.tar.xz: 5f56a6e575c3a6699c2b5b948226b8b860345feb
