@@ -1,3 +1,9 @@
+%ifarch armx
+%bcond_with	linphone
+%else
+%bcond_without	linphone
+%endif
+
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	15.12.3
@@ -28,7 +34,9 @@ BuildRequires:	pkgconfig(libotr)
 BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(libxslt)
+%if %{with linphone}
 BuildRequires:	pkgconfig(linphone)
+%endif
 BuildRequires:	pkgconfig(meanwhile)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ortp)
