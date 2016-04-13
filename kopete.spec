@@ -1,4 +1,4 @@
-%ifarch armx
+%ifarch %{armx}
 %bcond_with	linphone
 %else
 %bcond_without	linphone
