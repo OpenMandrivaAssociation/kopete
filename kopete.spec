@@ -49,7 +49,7 @@ BuildRequires:	pkgconfig(zlib)
 
 Requires:	akonadi
 Requires:	qca2-plugin-openssl-%{_lib}
-Requires:	kdepimlibs-core
+Requires:	kdepimlibs4-core
 Requires:	jasper
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Conflicts:	%{_lib}kopete4 < 3:4.11.0
