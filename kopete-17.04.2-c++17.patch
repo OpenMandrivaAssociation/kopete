@@ -1,0 +1,237 @@
+--- kopete-17.04.2/protocols/groupwise/libgroupwise/rtf.cc.omv~	2017-07-03 15:18:13.212550978 +0200
++++ kopete-17.04.2/protocols/groupwise/libgroupwise/rtf.cc	2017-07-03 15:18:18.452428086 +0200
+@@ -646,9 +646,9 @@ extern int rtflex (void);
+  */
+ YY_DECL
+ {
+-	register yy_state_type yy_current_state;
+-	register char *yy_cp, *yy_bp;
+-	register int yy_act;
++	yy_state_type yy_current_state;
++	char *yy_cp, *yy_bp;
++	int yy_act;
+     
+ #line 46 "rtf.ll"
+ 
+@@ -697,7 +697,7 @@ YY_DECL
+ yy_match:
+ 		do
+ 			{
+-			register YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
++			YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
+ 			if ( yy_accept[yy_current_state] )
+ 				{
+ 				(yy_last_accepting_state) = yy_current_state;
+@@ -930,9 +930,9 @@ case YY_STATE_EOF(INITIAL):
+  */
+ static int yy_get_next_buffer (void)
+ {
+-    	register char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
+-	register char *source = (yytext_ptr);
+-	register int number_to_move, i;
++    	char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
++	char *source = (yytext_ptr);
++	int number_to_move, i;
+ 	int ret_val;
+ 
+ 	if ( (yy_c_buf_p) > &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars) + 1] )
+@@ -1056,14 +1056,14 @@ static int yy_get_next_buffer (void)
+ 
+     static yy_state_type yy_get_previous_state (void)
+ {
+-	register yy_state_type yy_current_state;
+-	register char *yy_cp;
++	yy_state_type yy_current_state;
++	char *yy_cp;
+     
+ 	yy_current_state = (yy_start);
+ 
+ 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
+ 		{
+-		register YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
++		YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
+ 		if ( yy_accept[yy_current_state] )
+ 			{
+ 			(yy_last_accepting_state) = yy_current_state;
+@@ -1088,10 +1088,10 @@ static int yy_get_next_buffer (void)
+  */
+     static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )
+ {
+-	register int yy_is_jam;
+-    	register char *yy_cp = (yy_c_buf_p);
++	int yy_is_jam;
++    	char *yy_cp = (yy_c_buf_p);
+ 
+-	register YY_CHAR yy_c = 1;
++	YY_CHAR yy_c = 1;
+ 	if ( yy_accept[yy_current_state] )
+ 		{
+ 		(yy_last_accepting_state) = yy_current_state;
+@@ -1664,7 +1664,7 @@ int rtflex_destroy  (void)
+ #ifndef yytext_ptr
+ static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )
+ {
+-	register int i;
++	int i;
+     	for ( i = 0; i < n; ++i )
+ 		s1[i] = s2[i];
+ }
+@@ -1673,7 +1673,7 @@ static void yy_flex_strncpy (char* s1, y
+ #ifdef YY_NEED_STRLEN
+ static int yy_flex_strlen (yyconst char * s )
+ {
+-	register int n;
++	int n;
+     	for ( n = 0; s[n]; ++n )
+ 		;
+ 
+--- kopete-17.04.2/protocols/oscar/liboscar/tasks/chatnavservicetask.cpp.omv~	2017-07-03 15:13:33.604112551 +0200
++++ kopete-17.04.2/protocols/oscar/liboscar/tasks/chatnavservicetask.cpp	2017-07-03 15:13:42.355907036 +0200
+@@ -105,7 +105,7 @@ bool ChatNavServiceTask::take( Transfer*
+ void ChatNavServiceTask::onGo()
+ {
+     FLAP f =  { 0x02, 0, 0x00 };
+-    SNAC s = { 0x000D, m_type, 0x0000, client()->snacSequence() };
++    SNAC s = { 0x000D, static_cast<WORD>(m_type), 0x0000, client()->snacSequence() };
+     Buffer* b = new Buffer();
+ 
+     Transfer* t = createTransfer( f, s, b );
+--- kopete-17.04.2/protocols/oscar/liboscar/utils/rtf.cc.omv~	2017-07-03 15:15:01.219055569 +0200
++++ kopete-17.04.2/protocols/oscar/liboscar/utils/rtf.cc	2017-07-03 15:15:39.663153288 +0200
+@@ -590,9 +590,9 @@ YY_MALLOC_DECL
+ 
+ YY_DECL
+ 	{
+-	register yy_state_type yy_current_state;
+-	register char *yy_cp, *yy_bp;
+-	register int yy_act;
++	yy_state_type yy_current_state;
++	char *yy_cp, *yy_bp;
++	int yy_act;
+ 
+ #line 46 "rtf.ll"
+ 
+@@ -639,7 +639,7 @@ YY_DECL
+ yy_match:
+ 		do
+ 			{
+-			register YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
++			YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
+ 			if ( yy_accept[yy_current_state] )
+ 				{
+ 				yy_last_accepting_state = yy_current_state;
+@@ -874,9 +874,9 @@ case YY_STATE_EOF(INITIAL):
+ 
+ static int yy_get_next_buffer()
+ 	{
+-	register char *dest = yy_current_buffer->yy_ch_buf;
+-	register char *source = yytext_ptr;
+-	register int number_to_move, i;
++	char *dest = yy_current_buffer->yy_ch_buf;
++	char *source = yytext_ptr;
++	int number_to_move, i;
+ 	int ret_val;
+ 
+ 	if ( yy_c_buf_p > &yy_current_buffer->yy_ch_buf[yy_n_chars + 1] )
+@@ -1006,14 +1006,14 @@ static int yy_get_next_buffer()
+ 
+ static yy_state_type yy_get_previous_state()
+ 	{
+-	register yy_state_type yy_current_state;
+-	register char *yy_cp;
++	yy_state_type yy_current_state;
++	char *yy_cp;
+ 
+ 	yy_current_state = yy_start;
+ 
+ 	for ( yy_cp = yytext_ptr + YY_MORE_ADJ; yy_cp < yy_c_buf_p; ++yy_cp )
+ 		{
+-		register YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
++		YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
+ 		if ( yy_accept[yy_current_state] )
+ 			{
+ 			yy_last_accepting_state = yy_current_state;
+@@ -1045,10 +1045,10 @@ static yy_state_type yy_try_NUL_trans( y
+ yy_state_type yy_current_state;
+ #endif
+ 	{
+-	register int yy_is_jam;
+-	register char *yy_cp = yy_c_buf_p;
++	int yy_is_jam;
++	char *yy_cp = yy_c_buf_p;
+ 
+-	register YY_CHAR yy_c = 1;
++	YY_CHAR yy_c = 1;
+ 	if ( yy_accept[yy_current_state] )
+ 		{
+ 		yy_last_accepting_state = yy_current_state;
+@@ -1069,14 +1069,14 @@ yy_state_type yy_current_state;
+ 
+ #ifndef YY_NO_UNPUT
+ #ifdef YY_USE_PROTOS
+-static void yyunput( int c, register char *yy_bp )
++static void yyunput( int c, char *yy_bp )
+ #else
+ static void yyunput( c, yy_bp )
+ int c;
+-register char *yy_bp;
++char *yy_bp;
+ #endif
+ 	{
+-	register char *yy_cp = yy_c_buf_p;
++	char *yy_cp = yy_c_buf_p;
+ 
+ 	/* undo effects of setting up yytext */
+ 	*yy_cp = yy_hold_char;
+@@ -1084,10 +1084,10 @@ register char *yy_bp;
+ 	if ( yy_cp < yy_current_buffer->yy_ch_buf + 2 )
+ 		{ /* need to shift things up to make room */
+ 		/* +2 for EOB chars. */
+-		register int number_to_move = yy_n_chars + 2;
+-		register char *dest = &yy_current_buffer->yy_ch_buf[
++		int number_to_move = yy_n_chars + 2;
++		char *dest = &yy_current_buffer->yy_ch_buf[
+ 					yy_current_buffer->yy_buf_size + 2];
+-		register char *source =
++		char *source =
+ 				&yy_current_buffer->yy_ch_buf[number_to_move];
+ 
+ 		while ( source > yy_current_buffer->yy_ch_buf )
+@@ -1548,7 +1548,7 @@ yyconst char *s2;
+ int n;
+ #endif
+ 	{
+-	register int i;
++	int i;
+ 	for ( i = 0; i < n; ++i )
+ 		s1[i] = s2[i];
+ 	}
+@@ -1562,7 +1562,7 @@ static int yy_flex_strlen( s )
+ yyconst char *s;
+ #endif
+ 	{
+-	register int n;
++	int n;
+ 	for ( n = 0; s[n]; ++n )
+ 		;
+ 
+--- kopete-17.04.2/protocols/qq/crypt.cpp.omv~	2017-07-03 15:17:46.318181773 +0200
++++ kopete-17.04.2/protocols/qq/crypt.cpp	2017-07-03 15:17:55.819958907 +0200
+@@ -31,7 +31,7 @@
+ void TEA::encipher(unsigned int *const v, const unsigned int *const k, 
+ 			unsigned int *const w)
+ {
+-	register unsigned int 
++	unsigned int 
+ 		y     = ntohl(v[0]),
+ 		z     = ntohl(v[1]),
+ 		a     = ntohl(k[0]),
+@@ -54,7 +54,7 @@ void TEA::encipher(unsigned int *const v
+ void TEA::decipher(unsigned int *const v, const unsigned int *const k, 
+ 			unsigned int *const w)
+ {
+-	register unsigned int
++	unsigned int
+ 		y     = ntohl(v[0]),
+ 		z     = ntohl(v[1]),
+ 		a     = ntohl(k[0]),

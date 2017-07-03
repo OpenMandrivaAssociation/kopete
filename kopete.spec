@@ -20,6 +20,9 @@ Url:		http://www.kde.org/applications/internet/kopete/
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		kopete-4.12.4-jsoncpp.patch
+Patch1:		kopete-17.04.2-force-c++17.patch
+Patch2:		kopete-17.04.2-c++17.patch
+BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
 BuildRequires:	kdelibs-devel
@@ -29,7 +32,6 @@ BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
 BuildRequires:	pkgconfig(libidn)
-BuildRequires:	pkgconfig(libmsn)
 BuildRequires:	pkgconfig(libotr)
 BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(libxml-2.0)
@@ -90,7 +92,6 @@ plugin off of.
 %{_bindir}/kopete
 %{_datadir}/apps/kopete_translator 
 %{_datadir}/apps/kopete_yahoo                                                                          
-%{_datadir}/apps/kopete_wlm                                                                            
 %{_datadir}/apps/kopeterichtexteditpart                                                                
 %{_datadir}/apps/kconf_update/kopete-*                                                                 
 %{_libdir}/kde4/kcm_kopete_*                                                                           
@@ -396,12 +397,11 @@ based on Kopete.
 
 %prep
 %setup -q
-%patch0 -p1
+%apply_patches
 
 %build
-%cmake_kde4 -DWITH_GOOGLETALK=OFF -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
-%make
+%cmake_kde4 -DWITH_GOOGLETALK=ON -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6 -G Ninja
+%ninja
 
 %install
-%makeinstall_std -C build
-
+%ninja_install -C build
