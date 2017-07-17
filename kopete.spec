@@ -50,7 +50,7 @@ BuildRequires:	pkgconfig(zlib)
 #BuildRequires:	srtp-devel
 
 Requires:	akonadi
-Requires:	qca2-plugin-openssl-%{_lib}
+Requires:	qca2-plugin-gcrypt-%{_lib}
 Requires:	kdepimlibs4-core
 Requires:	jasper
 Conflicts:	kdenetwork4-devel < 3:4.11.0
