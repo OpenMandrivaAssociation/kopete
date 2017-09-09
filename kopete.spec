@@ -6,7 +6,7 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	17.07.90
+Version:	17.08.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
