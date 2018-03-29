@@ -68,6 +68,10 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Contacts)
 BuildRequires:	cmake(KF5IdentityManagement)
 BuildRequires:	cmake(KF5Libkleo)
+
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Qt5Sql) cmake(Qt5Test)
+
 # Not in Main
 #BuildRequires:	srtp-devel
 
