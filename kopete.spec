@@ -33,7 +33,6 @@ Patch3:		kopete-kf5-no-plugins-plugins.patch
 BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
-BuildRequires:	kdelibs-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
@@ -68,8 +67,11 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Contacts)
 BuildRequires:	cmake(KF5IdentityManagement)
 BuildRequires:	cmake(KF5Libkleo)
-
-BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5DNSSD)
+BuildRequires:	cmake(Phonon4Qt5)
+BuildRequires:	cmake(Gpgmepp)
+BuildRequires:	cmake(Qt5Core) cmake(Qt5Network) cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Qt5Sql) cmake(Qt5Test)
 
 # Not in Main
