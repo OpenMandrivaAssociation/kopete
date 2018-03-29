@@ -4,11 +4,11 @@
 %bcond_without	linphone
 %endif
 
-%define snapshot 20171103
+%define snapshot %{nil}
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	17.12.0
+Version:	18.03.80
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -30,8 +30,6 @@ Patch0:		kopete-4.12.4-jsoncpp.patch
 Patch1:		kopete-stdc++17.patch
 Patch2:		kopete-kf5-no-literal-SOVERSION.patch
 Patch3:		kopete-kf5-no-plugins-plugins.patch
-#Patch1:		kopete-17.04.2-force-c++17.patch
-#Patch2:		kopete-17.04.2-c++17.patch
 BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
@@ -388,7 +386,7 @@ based on Kopete.
 %apply_patches
 
 %build
-%cmake_kde5 -DWITH_GOOGLETALK=ON -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6 -G Ninja
+%cmake_kde5 -DWITH_GOOGLETALK=ON
 %ninja
 
 %install
