@@ -1,0 +1,11 @@
+--- kopete-17.04.2/CMakeLists.txt.omv~	2017-07-03 15:07:18.217940483 +0200
++++ kopete-17.04.2/CMakeLists.txt	2017-07-03 15:07:32.173611716 +0200
+@@ -1,6 +1,8 @@
+ cmake_minimum_required(VERSION 2.8.9)
+ project(kopete)
+ 
++set(CMAKE_CXX_STANDARD 17)
++
+ find_package(KDE4 REQUIRED)
+ include(KDE4Defaults)
+ include(MacroLibrary)

@@ -1,0 +1,8 @@
+--- a/kopete/chatwindow/a11y/CMakeLists.txt.orig	2018-03-29 22:55:35.921736755 +0100
++++ a/kopete/chatwindow/a11y/CMakeLists.txt	2018-03-29 22:55:49.398254602 +0100
+@@ -2,4 +2,4 @@
+ set(chatwindowaccessiblewidgetfactory_SRCS chatwindowaccessiblewidgetfactory.cpp accessiblechatmessagepart.cpp)
+ add_library(chatwindowaccessiblewidgetfactory MODULE ${chatwindowaccessiblewidgetfactory_SRCS})
+ target_link_libraries(chatwindowaccessiblewidgetfactory KF5::KHtml )
+-install(TARGETS chatwindowaccessiblewidgetfactory DESTINATION ${KDE_INSTALL_PLUGINDIR}/plugins/accessible)
++install(TARGETS chatwindowaccessiblewidgetfactory DESTINATION ${KDE_INSTALL_PLUGINDIR}/accessible)

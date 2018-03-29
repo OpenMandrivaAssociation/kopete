@@ -1,2 +1,4 @@
+removed_sources:
+  kopete-20171103.tar.xz: 64cd7a022b22fd4ba12d6cae944c3c4a1ada59a5
 sources:
-  kopete-17.04.0.tar.xz: 5f2c6c83d57a7d93d64684f1f4640ba113f312e4
+  kopete-18.03.80.tar.xz: 3f9a7f1247c28c7c9f48d0fadff00343117fd7be
