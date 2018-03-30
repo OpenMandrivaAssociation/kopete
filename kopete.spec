@@ -367,7 +367,6 @@ Requires:	%{libkopeteprivacy} = %{EVRD}
 Requires:	%{libkopetechatwindow_shared} = %{EVRD}
 Requires:	%{libkopete_oscar} = %{EVRD}
 Requires:	%{liboscar} = %{EVRD}
-Requires:	%{libkopete_otr_shared} = %{EVRD}
 Requires:	%{libkopeteidentity} = %{EVRD}
 Requires:	%{libkopetestatusmenu} = %{EVRD}
 Conflicts:	kdenetwork4-devel < 3:4.11.0
