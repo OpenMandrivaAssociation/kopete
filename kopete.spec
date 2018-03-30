@@ -47,7 +47,7 @@ BuildRequires:	pkgconfig(linphone)
 BuildRequires:	pkgconfig(meanwhile)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ortp)
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	cmake(Qca-qt5)
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	cmake(KF5Config)
@@ -78,7 +78,7 @@ BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Qt5Sql) cmake(Qt5Test)
 #BuildRequires:	srtp-devel
 
 Requires:	akonadi
-Requires:	qca2-plugin-gcrypt-%{_lib}
+Requires:	qca-plugin-gcrypt-%{_lib}
 Requires:	jasper
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Conflicts:	%{_lib}kopete4 < 3:4.11.0
