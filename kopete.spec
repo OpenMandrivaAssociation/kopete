@@ -19,7 +19,7 @@ Version:	18.03.80
 Release:	0.%{snapshot}.1
 Source0:	%{name}-20171103.tar.xz
 %else
-Release:	1
+Release:	2
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 %endif
 Epoch:		3
