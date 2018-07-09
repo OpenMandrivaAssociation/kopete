@@ -8,8 +8,10 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	18.03.80
-%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+Version:	18.04.2
+#define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%define is_beta 0
+
 %if %{is_beta}
 %define ftpdir unstable
 %else
@@ -28,8 +30,6 @@ Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
 Patch0:		kopete-4.12.4-jsoncpp.patch
 Patch1:		kopete-stdc++17.patch
-Patch2:		kopete-kf5-no-literal-SOVERSION.patch
-Patch3:		kopete-kf5-no-plugins-plugins.patch
 BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
@@ -149,6 +149,7 @@ plugin off of.
 %{_datadir}/kconf_update/kopete*
 %{_datadir}/kopete
 %{_datadir}/kopete_history
+%{_datadir}/knotifications5/kopete.notifyrc
 %{_datadir}/kservices5/aim.protocol
 %{_datadir}/kservices5/chatwindow.desktop
 %{_datadir}/kservices5/emailwindow.desktop
