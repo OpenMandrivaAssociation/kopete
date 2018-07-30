@@ -1,3 +1,5 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+
 %ifarch %{armx}
 %bcond_with	linphone
 %else
@@ -8,23 +10,14 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	18.04.2
-#define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
-%define is_beta 0
-
-%if %{is_beta}
-%define ftpdir unstable
-%else
-%define ftpdir stable
-%endif
+Version:	18.07.80
 %if "%{snapshot}" != ""
 Release:	0.%{snapshot}.1
 Source0:	%{name}-20171103.tar.xz
 %else
-Release:	2
-Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Release:	1
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 %endif
-Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
