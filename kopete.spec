@@ -10,9 +10,9 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	18.07.80
+Version:	18.08.1
 %if "%{snapshot}" != ""
-Release:	0.%{snapshot}.1
+Release:	1.%{snapshot}.1
 Source0:	%{name}-20171103.tar.xz
 %else
 Release:	1
@@ -77,6 +77,10 @@ Conflicts:	kdenetwork4-devel < 3:4.11.0
 Conflicts:	%{_lib}kopete4 < 3:4.11.0
 Conflicts:	%{_lib}kopete_otr_shared1 < 3:4.11.0
 
+# Yahoo Messenger doesn't seem to exist anymore
+%define libkyahoo %mklibname kyahoo 1
+Obsoletes:	%{libkyahoo} < %{EVRD}
+
 
 %define kopete_otr_shared_major 1
 %define libkopete_otr_shared %mklibname kopete_otr_shared %{kopete_otr_shared_major}
@@ -107,6 +111,7 @@ plugin off of.
 %{_bindir}/winpopup-install
 %{_bindir}/winpopup-send
 %{_libdir}/libqgroupwise.so
+%{_datadir}/metainfo/org.kde.kopete.appdata.xml
 %{_datadir}/config.kcfg/*
 %{_datadir}/dbus-1/interfaces/org.kde.Kopete*
 %{_datadir}/dbus-1/interfaces/org.kde.kopete*
@@ -135,7 +140,6 @@ plugin off of.
 %{_libdir}/qt5/plugins/kopete_urlpicpreview.so
 %{_libdir}/qt5/plugins/kopete_webpresence.so
 %{_libdir}/qt5/plugins/kopete_wp.so
-%{_libdir}/qt5/plugins/kopete_yahoo.so
 %{_libdir}/qt5/plugins/accessible/chatwindowaccessiblewidgetfactory.so
 %{_datadir}/applications/org.kde.kopete.desktop
 %{_datadir}/icons/*/*/*/*.*
@@ -173,7 +177,6 @@ plugin off of.
 %{_datadir}/kservices5/kopete_urlpicpreview.desktop
 %{_datadir}/kservices5/kopete_webpresence.desktop
 %{_datadir}/kservices5/kopete_wp.desktop
-%{_datadir}/kservices5/kopete_yahoo.desktop
 %{_datadir}/kservices5/xmpp.protocol
 %{_datadir}/kservicetypes5/kopeteplugin.desktop
 %{_datadir}/kservicetypes5/kopeteprotocol.desktop
@@ -196,21 +199,6 @@ Kopete shared library.
 
 %files -n %{libkopetecontactlist}
 %{_libdir}/libkopetecontactlist.so.%{kopetecontactlist_major}*
-
-#----------------------------------------------------------------------------
-
-%define kyahoo_major 1
-%define libkyahoo %mklibname kyahoo %{kyahoo_major}
-
-%package -n %{libkyahoo}
-Summary:	Kopete shared library
-Group:		System/Libraries
-
-%description -n %{libkyahoo}
-Kopete shared library.
-
-%files -n %{libkyahoo}
-%{_libdir}/libkyahoo.so.%{kyahoo_major}*
 
 #----------------------------------------------------------------------------
 
@@ -353,7 +341,6 @@ Kopete shared library.
 Summary:	Development files for Kopete
 Group:		Development/KDE and Qt
 Requires:	%{libkopetecontactlist} = %{EVRD}
-Requires:	%{libkyahoo} = %{EVRD}
 Requires:	%{libkopete_videodevice} = %{EVRD}
 Requires:	%{libkopeteaddaccountwizard} = %{EVRD}
 Requires:	%{libkopete} = %{EVRD}
