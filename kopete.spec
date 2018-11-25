@@ -10,7 +10,7 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	18.08.3
+Version:	18.11.80
 %if "%{snapshot}" != ""
 Release:	1.%{snapshot}.1
 Source0:	%{name}-20171103.tar.xz
@@ -22,7 +22,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
 Patch0:		kopete-4.12.4-jsoncpp.patch
-Patch1:		kopete-stdc++17.patch
 BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
