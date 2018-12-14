@@ -18,10 +18,13 @@ Source0:	%{name}-20171103.tar.xz
 Release:	1
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 %endif
+Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
+Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
+Patch2:		kopete-18.12.0-glibc-2.28.patch
+Patch3:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-mediastreamer2.14.patch
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
-Patch0:		kopete-4.12.4-jsoncpp.patch
 BuildRequires:	ninja
 BuildRequires:	jpeg-devel
 BuildRequires:	jsoncpp-devel
@@ -33,6 +36,8 @@ BuildRequires:	pkgconfig(libotr)
 BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(libxslt)
+BuildRequires:	pkgconfig(libsrtp2)
+BuildRequires:	pkgconfig(speex)
 %if %{with linphone}
 BuildRequires:	pkgconfig(linphone)
 %endif
@@ -42,6 +47,8 @@ BuildRequires:	pkgconfig(ortp)
 BuildRequires:	cmake(Qca-qt5)
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	kleopatra-devel
+BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5Crash)
@@ -106,6 +113,7 @@ users can use, in addition to templates for new developers to base a
 plugin off of.
 
 %files -f %{name}.lang
+%{_bindir}/libjingle-call
 %{_bindir}/kopete
 %{_bindir}/winpopup-install
 %{_bindir}/winpopup-send
@@ -116,6 +124,7 @@ plugin off of.
 %{_datadir}/dbus-1/interfaces/org.kde.kopete*
 %{_sysconfdir}/xdg/kopete.categories
 %{_sysconfdir}/xdg/kopeterc
+%{_libdir}/qt5/plugins/kopete_translator.so
 %{_libdir}/qt5/plugins/chattexteditpart.so
 %{_libdir}/qt5/plugins/kcm_kopete_*.so
 %{_libdir}/qt5/plugins/kopete_addbookmarks.so
@@ -173,6 +182,7 @@ plugin off of.
 %{_datadir}/kservices5/kopete_statusconfig.desktop
 %{_datadir}/kservices5/kopete_testbed.desktop
 %{_datadir}/kservices5/kopete_texteffect.desktop
+%{_datadir}/kservices5/kopete_translator.desktop
 %{_datadir}/kservices5/kopete_urlpicpreview.desktop
 %{_datadir}/kservices5/kopete_webpresence.desktop
 %{_datadir}/kservices5/kopete_wp.desktop
@@ -371,7 +381,9 @@ based on Kopete.
 %apply_patches
 
 %build
-%cmake_kde5 -DWITH_GOOGLETALK=ON
+%cmake_kde5 \
+	-DWITH_GOOGLETALK=ON \
+	-DWITH_translator:BOOL=ON
 %ninja
 
 %install
