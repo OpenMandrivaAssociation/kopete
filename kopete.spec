@@ -10,9 +10,9 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	18.12.0
+Version:	18.12.1
 %if "%{snapshot}" != ""
-Release:	0.%{snapshot}.1
+Release:	1.%{snapshot}.1
 Source0:	%{name}-20171103.tar.xz
 %else
 Release:	1
