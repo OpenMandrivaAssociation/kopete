@@ -6,18 +6,11 @@
 %bcond_without	linphone
 %endif
 
-%define snapshot %{nil}
-
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	18.12.3
-%if "%{snapshot}" != ""
-Release:	1.%{snapshot}.1
-Source0:	%{name}-20171103.tar.xz
-%else
-Release:	1
+Release:	2
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-%endif
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
 Patch2:		kopete-18.12.0-glibc-2.28.patch
@@ -373,11 +366,7 @@ based on Kopete.
 #----------------------------------------------------------------------------
 
 %prep
-%if "%{snapshot}" != ""
-%setup -qn %{name}
-%else
 %setup -q
-%endif
 %apply_patches
 
 %build
