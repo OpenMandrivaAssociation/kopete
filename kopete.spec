@@ -1,9 +1,9 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 %ifarch %{armx}
-%bcond_with	linphone
+%bcond_with linphone
 %else
-%bcond_without	linphone
+%bcond_without linphone
 %endif
 
 Summary:	KDE Internet Messenger
@@ -19,8 +19,8 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
 BuildRequires:	ninja
-BuildRequires:	jpeg-devel
-BuildRequires:	jsoncpp-devel
+BuildRequires:	pkgconfig(libjpeg)
+BuildRequires:	pkgconfig(jsoncpp)
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(jasper)
 BuildRequires:	pkgconfig(libgadu)
@@ -63,8 +63,13 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5DNSSD)
 BuildRequires:	cmake(Phonon4Qt5)
 BuildRequires:	cmake(Gpgmepp)
-BuildRequires:	cmake(Qt5Core) cmake(Qt5Network) cmake(Qt5Gui)
-BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Qt5Sql) cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(Qt5Test)
 
 # Not in Main
 #BuildRequires:	srtp-devel
@@ -366,8 +371,7 @@ based on Kopete.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 
 %build
 %cmake_kde5 \
