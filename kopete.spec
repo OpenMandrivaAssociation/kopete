@@ -31,6 +31,7 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(libsrtp2)
 BuildRequires:	pkgconfig(speex)
+BuildRequires:	pkgconfig(alsa)
 %if %{with linphone}
 BuildRequires:	pkgconfig(linphone)
 %endif
