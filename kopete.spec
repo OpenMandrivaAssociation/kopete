@@ -71,6 +71,7 @@ BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:	pkgconfig(libgcrypt)
 
 # Not in Main
 #BuildRequires:	srtp-devel
