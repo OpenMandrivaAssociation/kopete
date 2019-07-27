@@ -8,7 +8,7 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	19.04.2
+Version:	19.07.80
 Release:	1
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
@@ -122,7 +122,7 @@ plugin off of.
 %{_datadir}/config.kcfg/*
 %{_datadir}/dbus-1/interfaces/org.kde.Kopete*
 %{_datadir}/dbus-1/interfaces/org.kde.kopete*
-%{_sysconfdir}/xdg/kopete.categories
+%{_datadir}/qlogging-categories5/kopete.categories
 %{_sysconfdir}/xdg/kopeterc
 %{_libdir}/qt5/plugins/kopete_translator.so
 %{_libdir}/qt5/plugins/chattexteditpart.so
@@ -193,6 +193,10 @@ plugin off of.
 %{_datadir}/kxmlgui5/kopete
 %{_datadir}/kxmlgui5/kopete_groupwise
 %{_datadir}/sounds/Kopete*
+%{_libdir}/libkopete_otr_shared.so.*
+%{_libdir}/qt5/plugins/kopete_otr.so
+%{_datadir}/kservices5/kopete_otr.desktop
+%{_datadir}/kxmlgui5/kopete_otr
 
 #----------------------------------------------------------------------------
 
