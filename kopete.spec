@@ -8,9 +8,9 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
 Patch3:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-mediastreamer2.14.patch
