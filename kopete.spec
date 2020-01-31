@@ -112,7 +112,7 @@ users can use, in addition to templates for new developers to base a
 plugin off of.
 
 %files -f %{name}.lang
-%{_bindir}/libjingle-call
+%optional %{_bindir}/libjingle-call
 %{_bindir}/kopete
 %{_bindir}/winpopup-install
 %{_bindir}/winpopup-send
