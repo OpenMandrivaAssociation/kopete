@@ -1,0 +1,12 @@
+diff -up kopete-20.04.3/protocols/jabber/libjingle/talk/base/openssladapter.cc.omv~ kopete-20.04.3/protocols/jabber/libjingle/talk/base/openssladapter.cc
+--- kopete-20.04.3/protocols/jabber/libjingle/talk/base/openssladapter.cc.omv~	2020-07-08 04:54:38.304645385 +0200
++++ kopete-20.04.3/protocols/jabber/libjingle/talk/base/openssladapter.cc	2020-07-08 04:55:53.692470386 +0200
+@@ -758,7 +758,7 @@ bool OpenSSLAdapter::VerifyServerName(SS
+       value = NULL;
+ 
+       if (meth->it) {
+-        ASN1_item_free(reinterpret_cast<ASN1_VALUE*>(ext_str), meth->it);
++        ASN1_item_free(reinterpret_cast<ASN1_VALUE*>(ext_str), reinterpret_cast<const ASN1_ITEM*>(meth->it));
+       } else {
+         meth->ext_free(ext_str);
+       }
