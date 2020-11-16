@@ -3,7 +3,7 @@
 %ifarch %{armx}
 %bcond_with linphone
 %else
-%bcond_without linphone
+%bcond_with linphone
 %endif
 
 Summary:	KDE Internet Messenger
