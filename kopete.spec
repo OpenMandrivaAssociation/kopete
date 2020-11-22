@@ -8,13 +8,14 @@
 
 Summary:	KDE Internet Messenger
 Name:		kopete
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
 Patch2:		kopete-openssl-3.0.patch
 Patch3:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-mediastreamer2.14.patch
+Patch4:		kopete-20.11.80-fix-build-with-current-mediastreamer.patch
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/

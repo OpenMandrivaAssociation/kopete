@@ -1,0 +1,28 @@
+diff -up kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.cc.omv~ kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.cc
+--- kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.cc.omv~	2020-11-22 02:04:40.465169228 +0100
++++ kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.cc	2020-11-22 02:04:46.922267361 +0100
+@@ -34,11 +34,9 @@
+ #ifdef HAVE_LINPHONE
+ 
+ // LinphoneMediaEngine is a Linphone implementation of MediaEngine
+-extern "C" {
+ #include <mediastreamer2/mediastream.h>
+ #include <mediastreamer2/mssndcard.h>
+ #include <mediastreamer2/msfilter.h>
+-}
+ 
+ #include "talk/session/phone/linphonemediaengine.h"
+ 
+diff -up kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.h.omv~ kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.h
+--- kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.h.omv~	2020-11-22 02:07:03.243329079 +0100
++++ kopete-20.11.80/protocols/jabber/libjingle/talk/session/phone/linphonemediaengine.h	2020-11-22 02:07:06.113372298 +0100
+@@ -35,9 +35,7 @@
+ #include <string>
+ #include <vector>
+ 
+-extern "C" {
+ #include <mediastreamer2/mediastream.h>
+-}
+ 
+ #include "talk/base/scoped_ptr.h"
+ #include "talk/session/phone/codec.h"
