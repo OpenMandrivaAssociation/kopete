@@ -9,7 +9,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	22.04.1
-Release:	2
+Release:	3
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
