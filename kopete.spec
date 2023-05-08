@@ -1,4 +1,4 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 %ifarch %{armx}
 %bcond_with linphone
@@ -9,7 +9,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	23.04.0
-Release:	1
+Release:	2
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
@@ -72,13 +72,13 @@ BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Test)
-BuildRequires:	pkgconfig(libgcrypt)
+BuildRequires:	kleopatra-devel
 
 # Not in Main
 #BuildRequires:	srtp-devel
 
 Requires:	akonadi
-Requires:	qca-plugin-gcrypt-%{_lib}
+Requires:	qca-plugin-openssl-%{_lib}
 Requires:	jasper
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Conflicts:	%{_lib}kopete4 < 3:4.11.0
@@ -384,7 +384,8 @@ based on Kopete.
 %cmake_kde5 \
 	-DWITH_GOOGLETALK=ON \
 	-DWITH_translator:BOOL=ON
-%ninja
+
+%ninja_build
 
 %install
 %ninja_install -C build
