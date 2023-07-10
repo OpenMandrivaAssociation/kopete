@@ -9,7 +9,7 @@
 Summary:	KDE Internet Messenger
 Name:		kopete
 Version:	23.04.3
-Release:	1
+Release:	2
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-openssl-1.1.patch
 Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp2.patch
@@ -33,6 +33,7 @@ BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(libsrtp2)
 BuildRequires:	pkgconfig(speex)
 BuildRequires:	pkgconfig(alsa)
+BuildRequires:	pkgconfig(libgcrypt)
 %if %{with linphone}
 BuildRequires:	pkgconfig(linphone)
 %endif
