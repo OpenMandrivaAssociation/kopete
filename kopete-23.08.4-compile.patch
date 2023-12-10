@@ -1,0 +1,45 @@
+diff -up kopete-23.08.4/protocols/meanwhile/meanwhileaccount.cpp.omv~ kopete-23.08.4/protocols/meanwhile/meanwhileaccount.cpp
+--- kopete-23.08.4/protocols/meanwhile/meanwhileaccount.cpp.omv~	2023-12-10 21:59:38.157929615 +0100
++++ kopete-23.08.4/protocols/meanwhile/meanwhileaccount.cpp	2023-12-10 22:00:07.398930507 +0100
+@@ -32,6 +32,7 @@
+ #include <kconfigbase.h>
+ #include <kinputdialog.h>
+ #include <kmessagebox.h>
++#include <KDELibs4Support/kmessagebox_queued.h>
+ 
+ MeanwhileAccount::MeanwhileAccount(
+                         MeanwhileProtocol *parent,
+diff -up kopete-23.08.4/protocols/meanwhile/meanwhileeditaccountwidget.cpp.omv~ kopete-23.08.4/protocols/meanwhile/meanwhileeditaccountwidget.cpp
+--- kopete-23.08.4/protocols/meanwhile/meanwhileeditaccountwidget.cpp.omv~	2023-12-10 22:01:33.112933123 +0100
++++ kopete-23.08.4/protocols/meanwhile/meanwhileeditaccountwidget.cpp	2023-12-10 22:01:43.410933437 +0100
+@@ -20,6 +20,7 @@
+ #include <kopeteaccount.h>
+ #include <kopetepasswordwidget.h>
+ #include <kmessagebox.h>
++#include <kmessagebox_queued.h>
+ #include <klocale.h>
+ 
+ #include "meanwhileprotocol.h"
+diff -up kopete-23.08.4/protocols/meanwhile/meanwhileprotocol.cpp.omv~ kopete-23.08.4/protocols/meanwhile/meanwhileprotocol.cpp
+--- kopete-23.08.4/protocols/meanwhile/meanwhileprotocol.cpp.omv~	2023-12-10 22:02:16.048934433 +0100
++++ kopete-23.08.4/protocols/meanwhile/meanwhileprotocol.cpp	2023-12-10 22:03:22.709936468 +0100
+@@ -29,7 +29,7 @@ K_PLUGIN_FACTORY( MeanwhileProtocolFacto
+ K_EXPORT_PLUGIN( MeanwhileProtocolFactory( "kopete_meanwhile" ) )
+ 
+ MeanwhileProtocol::MeanwhileProtocol(QObject* parent, const QVariantList &/*args*/)
+-: Kopete::Protocol(MeanwhileProtocolFactory::componentData(), parent),
++: Kopete::Protocol(parent),
+ 
+     statusOffline(Kopete::OnlineStatus::Offline, 25, this, 0, QStringList(),
+             i18n("Offline"), i18n("Offline"),
+diff -up kopete-23.08.4/protocols/meanwhile/meanwhilesession.cpp.omv~ kopete-23.08.4/protocols/meanwhile/meanwhilesession.cpp
+--- kopete-23.08.4/protocols/meanwhile/meanwhilesession.cpp.omv~	2023-12-10 22:00:54.510931945 +0100
++++ kopete-23.08.4/protocols/meanwhile/meanwhilesession.cpp	2023-12-10 22:01:03.823932229 +0100
+@@ -21,6 +21,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <kmessagebox.h>
++#include <KDELibs4Support/kmessagebox_queued.h>
+ #include <klocale.h>
+ #include <qtcpsocket.h>
+ 

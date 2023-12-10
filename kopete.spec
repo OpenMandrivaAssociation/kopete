@@ -16,6 +16,7 @@ Patch1:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-srtp
 Patch2:		kopete-openssl-3.0.patch
 Patch3:		https://git.archlinux.org/svntogit/packages.git/plain/trunk/kopete-mediastreamer2.14.patch
 Patch4:		kopete-20.11.80-fix-build-with-current-mediastreamer.patch
+Patch5:		kopete-23.08.4-compile.patch
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/internet/kopete/
@@ -177,6 +178,7 @@ plugin off of.
 %{_datadir}/kservices5/kopete_history.desktop
 %{_datadir}/kservices5/kopete_icq.desktop
 %{_datadir}/kservices5/kopete_jabber.desktop
+%{_datadir}/kservices5/kopete_meanwhile.desktop
 %{_datadir}/kservices5/kopete_pluginconfig.desktop
 %{_datadir}/kservices5/kopete_privacy.desktop
 %{_datadir}/kservices5/kopete_qq.desktop
@@ -304,6 +306,21 @@ Kopete shared library.
 
 %files -n %{libkopetestatusmenu}
 %{_libdir}/libkopetestatusmenu.so.%{kopetestatusmenu_major}*
+
+#----------------------------------------------------------------------------
+
+%define kopete_meanwhile_major 1
+%define libkopete_meanwhile %mklibname kopete_meanwhile %{kopete_meanwhile_major}
+
+%package -n %{libkopete_meanwhile}
+Summary:	Kopete shared library
+Group:		System/Libraries
+
+%description -n %{libkopete_meanwhile}
+Kopete shared library.
+
+%files -n %{libkopete_meanwhile}
+%{_libdir}/libkopete_meanwhile.so.%{kopete_meanwhile_major}*
 
 #----------------------------------------------------------------------------
 
