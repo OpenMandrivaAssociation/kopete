@@ -143,6 +143,7 @@ plugin off of.
 %{_libdir}/qt5/plugins/kopete_history.so
 %{_libdir}/qt5/plugins/kopete_icq.so
 %{_libdir}/qt5/plugins/kopete_jabber.so
+%{_libdir}/qt5/plugins/kopete_meanwhile.so
 %{_libdir}/qt5/plugins/kopete_privacy.so
 %{_libdir}/qt5/plugins/kopete_qq.so
 %{_libdir}/qt5/plugins/kopete_statistics.so
@@ -306,21 +307,6 @@ Kopete shared library.
 
 %files -n %{libkopetestatusmenu}
 %{_libdir}/libkopetestatusmenu.so.%{kopetestatusmenu_major}*
-
-#----------------------------------------------------------------------------
-
-%define kopete_meanwhile_major 1
-%define libkopete_meanwhile %mklibname kopete_meanwhile %{kopete_meanwhile_major}
-
-%package -n %{libkopete_meanwhile}
-Summary:	Kopete shared library
-Group:		System/Libraries
-
-%description -n %{libkopete_meanwhile}
-Kopete shared library.
-
-%files -n %{libkopete_meanwhile}
-%{_libdir}/libkopete_meanwhile.so.%{kopete_meanwhile_major}*
 
 #----------------------------------------------------------------------------
 
