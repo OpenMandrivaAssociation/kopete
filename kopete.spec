@@ -19,7 +19,7 @@ Patch4:		kopete-20.11.80-fix-build-with-current-mediastreamer.patch
 Patch5:		kopete-23.08.4-compile.patch
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org/applications/internet/kopete/
+Url:		https://www.kde.org/applications/internet/kopete/
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(jsoncpp)
